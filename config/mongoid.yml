@@ -1,0 +1,8 @@
+development:
+  clients:
+    default:
+      database: ordering_service_development
+      hosts:
+        - mongodb:27017
+  options:
+    # Define aqui as opções adicionais, se necessário

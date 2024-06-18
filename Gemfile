@@ -27,6 +27,12 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# MySql
+gem 'mysql2', '~> 0.5.6'
+
+# MongoDB
+gem 'mongoid', '~> 7.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -52,7 +58,9 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
-  gem 'rubocop', require: false
+  gem 'rubocop', '~> 1.52.0'
+
+  gem 'dotenv-rails', '~> 2.8.1'
 end
 
 group :development do
