@@ -33,6 +33,8 @@ gem 'mysql2', '~> 0.5.6'
 # MongoDB
 gem 'mongoid', '~> 7.0'
 
+gem 'mongo', '~> 2.16.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
