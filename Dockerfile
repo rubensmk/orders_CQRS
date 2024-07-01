@@ -16,9 +16,6 @@ RUN bundle install
 # Copia o restante da aplicação
 COPY . .
 
-# Precompila assets para produção
-RUN RAILS_ENV=production bundle exec rake assets:precompile
-
 # Expõe a porta da aplicação
 EXPOSE 3000
 
