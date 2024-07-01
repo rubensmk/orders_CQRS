@@ -1,3 +1,3 @@
 class Order < ApplicationRecord
-  # Validações e lógica de negócios para o MySQL (ActiveRecord)
+  validates :total_amount, presence: true
 end

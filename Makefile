@@ -4,6 +4,10 @@ API_CONTAINER_NAME=api
 
 .PHONY: up down mongo-bash mysql-bash api console
 
+build:
+	@echo "Building..."
+	docker compose up --build
+
 up:
 	@echo "Starting all containers..."
 	docker compose up

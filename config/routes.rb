@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  namespace :commands do
-    resources :orders, only: [:create]
-  end
+  mount RailsEventStore::Browser => '/res' if Rails.env.development?
 
-  namespace :queries do
-    resources :orders, only: [:index]
-  end
+  resources :orders
 end

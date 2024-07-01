@@ -28,6 +28,7 @@ Style/ClassAndModuleChildren:
     - "test/test_helper.rb"
 
 Style/Documentation:
+  Enabled: false
   Exclude:
     - "spec/**/*"
     - "test/**/*"
