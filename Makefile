@@ -35,3 +35,7 @@ console:
 debug:
 	@echo "Debugging with byebug..."
 	docker attach $(API_CONTAINER_NAME)
+
+rspec:
+	@echo "Testing with Rspec..."
+	docker exec -it $(API_CONTAINER_NAME) rspec
