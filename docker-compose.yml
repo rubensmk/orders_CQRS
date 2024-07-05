@@ -4,8 +4,8 @@ services:
     container_name: mysql-8.0
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: ordering_service
-      MYSQL_USER: user
+      MYSQL_DATABASE: ordering_service_development
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
@@ -26,8 +26,8 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && rails server -p 3000 -b 0.0.0.0"
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: ordering_service
-      MYSQL_USER: user
+      MYSQL_DATABASE: ordering_service_development
+      MYSQL_USER: root
       MYSQL_PASSWORD: password
       RUBY_DEBUG_PORT: 1234
     volumes:
