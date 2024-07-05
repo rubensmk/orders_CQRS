@@ -9,6 +9,7 @@ env:
   RAILS_ENV: test
   MYSQL_USER: root
   MYSQL_PASSWORD: password
+  MYSQL_ROOT_PASSWORD: password
   MYSQL_HOST: db
   MYSQL_PORT: 3306
   MYSQL_DATABASE: ordering_service_test
