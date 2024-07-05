@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_07_05_014806) do
+ActiveRecord::Schema[7.0].define(version: 2024_07_05_184931) do
+  create_table "customers", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "event_store_events", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "event_id", limit: 36, null: false
     t.string "event_type", null: false
@@ -40,7 +48,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_07_05_014806) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "status", default: 0
+    t.bigint "customer_id"
+    t.index ["customer_id"], name: "index_orders_on_customer_id"
   end
 
   add_foreign_key "event_store_events_in_streams", "event_store_events", column: "event_id", primary_key: "event_id"
+  add_foreign_key "orders", "customers"
 end
