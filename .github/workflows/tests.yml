@@ -1,0 +1,61 @@
+name: Run RSpec Tests
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  RAILS_ENV: test
+  MYSQL_USER: root
+  MYSQL_PASSWORD: password
+  MYSQL_HOST: db
+  MYSQL_PORT: 3306
+  MYSQL_DATABASE: ordering_service_test
+  MONGODB_HOST: localhost
+  MONGODB_PORT: 27017
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: ordering_service_test
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+          MYSQL_HOST: db
+          MYSQL_PORT: 3306
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+      mongodb:
+        image: mongo:3.0
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2.1"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update && sudo apt-get -yqq install libpq-dev
+          bundle install --jobs 4 --retry 3
+
+      - name: Run Tests
+        env:
+          RAILS_ENV: test
+        run: |
+          cp config/database.ci.yml config/database.yml
+          bundle exec rails db:schema:load
+          bundle exec rspec --format progress
