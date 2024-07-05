@@ -42,5 +42,13 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
 
+      - name: Create test database
+        run: |
+          RAILS_ENV=test bundle exec rails db:create
+
+      - name: Load schema
+        run: |
+          RAILS_ENV=test bundle exec rails db:schema:load
+
       - name: Run RSpec
         run: bundle exec rspec
