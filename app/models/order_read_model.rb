@@ -3,7 +3,7 @@ class OrderReadModel
   include Mongoid::Timestamps
 
   field :order_id, type: Integer
-  field :customer_name, type: String
+  field :status, type: String
   field :total_amount, type: Float
 
   index({ order_id: 1 }, { unique: true })

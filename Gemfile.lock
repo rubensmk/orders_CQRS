@@ -281,7 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-  byebug
+  byebug (~> 11.1)
   capybara
   debug
   dotenv-rails (~> 2.8.1)

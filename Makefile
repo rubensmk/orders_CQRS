@@ -31,3 +31,7 @@ api:
 console:
 	@echo "Opening Rails api container..."
 	docker exec -it $(API_CONTAINER_NAME) rails c
+
+debug:
+	@echo "Debugging with byebug..."
+	docker attach $(API_CONTAINER_NAME)

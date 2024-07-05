@@ -65,6 +65,8 @@ group :development, :test do
   gem 'rubocop', '~> 1.52.0'
 
   gem 'dotenv-rails', '~> 2.8.1'
+
+  gem "byebug", "~> 11.1"
 end
 
 group :development do
