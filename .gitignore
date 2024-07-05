@@ -36,3 +36,5 @@
 
 # Ignore o arquivo .env
 .env
+.env.development
+.env.test
