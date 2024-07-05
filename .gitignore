@@ -36,3 +36,4 @@
 
 # Ignore o arquivo .env
 .env
+.env.test
