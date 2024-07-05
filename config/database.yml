@@ -17,8 +17,8 @@ test:
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: <%= ENV['MYSQL_USER'] %>
   password: <%= ENV['MYSQL_PASSWORD'] %>
-  host: <%= ENV['MYSQL_HOST'] || 'db' %>
-  port: <%= ENV['MYSQL_PORT'] || 3306 %>
+  host: <%= ENV['MYSQL_HOST'] %>
+  port: <%= ENV['MYSQL_PORT'] %>
   database: <%= ENV['MYSQL_DATABASE'] %>
 
 production:
