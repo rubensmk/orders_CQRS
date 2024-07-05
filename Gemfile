@@ -67,6 +67,12 @@ group :development, :test do
   gem 'dotenv-rails', '~> 2.8.1'
 
   gem "byebug", "~> 11.1"
+
+  gem 'rspec-rails', '~> 6.1.0'
+
+  gem "factory_bot_rails", "~> 6.4"
+
+  gem "faker", "~> 3.4"
 end
 
 group :development do
@@ -85,4 +91,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "database_cleaner-active_record", "~> 2.1"
 end
