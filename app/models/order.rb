@@ -4,4 +4,5 @@ class Order < ApplicationRecord
   validates :total_amount, presence: true
 
   belongs_to :customer
+  belongs_to :event
 end
