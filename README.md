@@ -58,3 +58,26 @@ Em resumo, a combinação de Event Sourcing com CQRS oferece um conjunto robusto
 
 - Ruby 3.2.1
 
+## Passos para Configurar o Projeto
+
+1. **Clone o repositório**
+
+    ```sh
+    git clone https://github.com/rubensmk/event_tickets_service.git
+    cd event_tickets_service
+    ```
+
+2. **Crie o arquivo .env**
+
+    ```sh
+    cp .env. .env.sample
+    ```
+
+3. **Inicie o projeto**
+
+    Certifique-se de ter um banco de dados PostgreSQL rodando e configurado corretamente. Em seguida, execute:
+
+    ```sh
+    make build
+    make up
+    ```
