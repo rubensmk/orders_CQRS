@@ -3,6 +3,8 @@ class OrderReadModel
   include Mongoid::Timestamps
 
   field :order_id, type: Integer
+  field :customer_id, type: Integer
+  field :event_id, type: Integer
   field :status, type: String
   field :total_amount, type: Float
 
