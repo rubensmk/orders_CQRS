@@ -1,4 +1,4 @@
-# Event Tickets Service (CQRS + Event Sourcing)
+# Event Tickets Service (CQRS + Event Sourcing + Nokogiri + Solid Queue)
 
 ## Descrição
 > **Nota:** O termo "Event" pode gerar alguma confusão nesta descrição, pois o projeto exemplifica uma API de vendas de ingressos para eventos (como shows ou outros tipos de entretenimento). No entanto, o termo "Event" também é utilizado no contexto de **Event Sourcing**, uma técnica de desenvolvimento implementada neste projeto. Portanto, é importante distinguir entre os "eventos" relacionados aos ingressos e os "eventos" no sentido de mudanças de estado capturadas no Event Sourcing.
