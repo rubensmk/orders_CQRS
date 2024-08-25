@@ -75,6 +75,8 @@ group :development, :test do
   gem "faker", "~> 3.4"
 
   gem "nokogiri", force_ruby_platform: true
+
+  gem "solid_queue"
 end
 
 group :development do
