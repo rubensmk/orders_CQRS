@@ -1,6 +1,8 @@
 # Event Tickets Service (CQRS + Event Sourcing)
 
 ## Descrição
+> **Nota:** O termo "Event" pode gerar alguma confusão nesta descrição, pois o projeto exemplifica uma API de vendas de ingressos para eventos (como shows ou outros tipos de entretenimento). No entanto, o termo "Event" também é utilizado no contexto de **Event Sourcing**, uma técnica de desenvolvimento implementada neste projeto. Portanto, é importante distinguir entre os "eventos" relacionados aos ingressos e os "eventos" no sentido de mudanças de estado capturadas no Event Sourcing.
+
 
 **Event Tickets Service** é uma API desenvolvida em Ruby on Rails para gerenciar a venda de ingressos para eventos. Esta API está sendo construída utilizando a versão 7.0.8 do Ruby on Rails e a versão 3.2.1 do Ruby. A aplicação utiliza dois bancos de dados: MongoDB e MySQL, e segue um design pattern inspirado no CQRS (Command Query Responsibility Segregation) com Event Sourcing utilizando a gem rails-event-store. A idéia é que toda vez que for gerado um pedido de compra para o evento seja registrado em dois tipos bancos diferentes, seguindo a lógica do CQRS, um para escrita e todo para a leitura dos dados. Para que esses dados sejam escritos em dois bancos diferentes utilizei a estratégias de sincronização via Event Sourcing.
 
