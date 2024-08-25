@@ -73,6 +73,8 @@ group :development, :test do
   gem "factory_bot_rails", "~> 6.4"
 
   gem "faker", "~> 3.4"
+
+  gem "nokogiri", force_ruby_platform: true
 end
 
 group :development do
