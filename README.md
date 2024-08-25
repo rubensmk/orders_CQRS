@@ -7,6 +7,8 @@
 **Event Tickets Service** é uma API desenvolvida em Ruby on Rails para gerenciar a venda de ingressos para eventos (como shows ou outros tipos de entretenimento). Esta API está sendo construída utilizando a versão 7.0.8 do Ruby on Rails e a versão 3.2.1 do Ruby. A aplicação utiliza dois bancos de dados: MongoDB e MySQL, e segue um design pattern inspirado no CQRS (Command Query Responsibility Segregation) com Event Sourcing utilizando a gem rails-event-store. A idéia é que toda vez que for gerado um pedido de compra para o evento seja registrado em dois tipos bancos diferentes, seguindo a lógica do CQRS, um para escrita e todo para a leitura dos dados. Para que esses dados sejam escritos em dois bancos diferentes utilizei a estratégias de sincronização via Event Sourcing. Para a criação de eventos foi criado um job, executado usando Solid Queue, que faz o scrapping da página de eventos do Sympla.
 
 ![image](https://github.com/user-attachments/assets/fbe041ed-81fa-4524-a248-a5b26f2e0ad5)
+![image](https://github.com/user-attachments/assets/a33ed9ba-1e65-40c5-bcec-0c790b2b3b9f)
+
 
 ## Tecnologias Utilizadas
 
