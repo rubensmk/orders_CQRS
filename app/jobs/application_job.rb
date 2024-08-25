@@ -1,4 +1,7 @@
 class ApplicationJob < ActiveJob::Base
+  require 'nokogiri'
+  require 'open-uri'
+
   # Automatically retry jobs that encountered a deadlock
   # retry_on ActiveRecord::Deadlocked
 
