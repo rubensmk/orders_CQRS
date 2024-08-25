@@ -57,6 +57,7 @@ Em resumo, a combinação de Event Sourcing com CQRS oferece um conjunto robusto
 - **Design Pattern**: CQRS (Command Query Responsibility Segregation)
 - **Gems**:
   - [rails-event-store](https://railseventstore.org/)
+  - [nokogiri](https://nokogiri.org/)
 
 ## Requisitos
 
